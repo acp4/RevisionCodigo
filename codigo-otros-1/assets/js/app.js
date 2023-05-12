@@ -3,7 +3,7 @@
  coloque async en la funcion displayerUser
  Se modifico la ruta del css y js para el html
  simplifique la dirrecion url de la api declarando solo en una variable
-
+ modificacion de comillas por apostrofe grabe 
 
 */
 
@@ -29,6 +29,4 @@ function handleError(err) {
   n.textContent = `Algo salió mal: ${err}`
 }
 
-displayUser(url)
-.then(displayUser)
-.catch(handleError);
+displayUser(url).catch(handleError);
