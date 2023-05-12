@@ -2,11 +2,13 @@
  Renombre las variables quitandole $
  coloque async en la funcion displayerUser
  Se modifico la ruta del css y js para el html
+ simplifique la dirrecion url de la api declarando solo en una variable
+
 
 */
 
-const baseEndpoint = 'https://api.github.com';
-const usersEndpoint = `${baseEndpoint}/users`;
+
+const url = 'https://api.github.com/users';
 const n = document.querySelector('#name');
 const b = document.querySelector('#blog');
 const l = document.querySelector('.location');
@@ -27,6 +29,6 @@ function handleError(err) {
   n.textContent = `Algo salió mal: ${err}`
 }
 
-displayUser(usersEndpoint)
+displayUser(url)
 .then(displayUser)
 .catch(handleError);
